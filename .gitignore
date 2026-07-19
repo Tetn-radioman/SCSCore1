@@ -1,0 +1,61 @@
+# Qt
+*.pro.user
+*.pro.user.*
+*.user
+*.user.*
+*.creator
+*.creator.*
+*.files
+*.includes
+*.config
+*.config.*
+
+# Build directories
+build/
+build-*/
+*-build/
+*-Debug/
+*-Release/
+CMakeBuild/
+cmake-build-*/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CMakeUserPresets.json
+*.cmake
+!CMakeLists.txt
+
+# Compiler generated
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Qt generated
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+*.moc
+*_autogen
+*_autogen/
+*.gcno
+*.gcda
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
