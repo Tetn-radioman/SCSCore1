@@ -3,6 +3,7 @@
 
 #include "imodule.h"
 #include "appbus.h"
+//другие включения
 
 class ExampleModule : public IModule {
     Q_OBJECT
@@ -18,6 +19,7 @@ public:
 
 private:
     void handleTestEvent(const QJsonObject &data);
+    // обработчики событий
 };
 
 #endif

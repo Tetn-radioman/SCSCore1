@@ -1,21 +1,21 @@
-#include "examplemodule.h"
-#include "../../Core/configmanager.h"
-#include <QDebug>
+#include "examplemodule.h"//            свой заговолок
+#include "../../Core/configmanager.h"// менеджер конфигов
+#include <QDebug>//                     отладка
 #include <QTimer>
 
-ExampleModule::ExampleModule(QObject *parent)
-    : IModule(parent) {
+ExampleModule::ExampleModule(QObject *parent)// конструктор
+    : IModule(parent) {// вызываем конструктор родителя
     // Подписываемся на события
     connect(AppBus::instance(), &AppBus::eventReceived,
-            this, &ExampleModule::onEvent);
+            this, &ExampleModule::onEvent);// connect(отправитель, &Класс::сигнал, получатель, &Класс::слот);
 }
 
-ExampleModule::~ExampleModule() {
+ExampleModule::~ExampleModule() {// деструктор
     // Отписываемся
-    disconnect(AppBus::instance(), nullptr, this, nullptr);
+    disconnect(AppBus::instance(), nullptr, this, nullptr);// отключает все соединения от этого объекта
 }
 
-bool ExampleModule::init() {
+bool ExampleModule::init() {// сердце модуля
     qDebug() << "[ExampleModule] Инициализация...";
 
     // Загружаем конфиг для модуля
