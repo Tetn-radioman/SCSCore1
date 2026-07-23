@@ -1,8 +1,8 @@
 #ifndef IMODULE_H
 #define IMODULE_H
 
-#include <QObject>
-#include <QJsonObject>
+#include <QObject>// сигналы слоты и т д
+#include <QJsonObject>// КОНТЕЙНЕР ДЛЯ КЛАССОВ
 
 #include "appbus.h"
 
@@ -12,7 +12,7 @@ public:
     explicit IModule(QObject *parent = nullptr) : QObject(parent) {}
     virtual ~IModule() = default;
 
-    virtual bool init() = 0;
+    virtual bool init() = 0; // 1 - готов к работе 2 - что-то не так модуль не загружается
     virtual void shutdown() = 0;
     virtual QString name() const = 0;
 

@@ -2,10 +2,10 @@
 #define APPBUS_H
 
 #include <QObject>
-#include <QHash>
-#include <QList>
-#include <QJsonObject>
-#include <QMutex>
+#include <QHash>        // для словарей хранение подписок
+#include <QList>        // списки
+#include <QJsonObject>  // данные событий
+#include <QMutex>       // потокобезопасность
 
 // Типы событий, которые могут происходить в системе
 enum class EventType {

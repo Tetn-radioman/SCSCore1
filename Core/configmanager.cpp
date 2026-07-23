@@ -11,7 +11,7 @@ ConfigManager* ConfigManager::instance() {
     }
     return m_instance;
 }
-
+// Открытие конфига
 bool ConfigManager::loadConfig(const QString &path) {
     QFile file(path);
     if (!file.open(QIODevice::ReadOnly)) {
